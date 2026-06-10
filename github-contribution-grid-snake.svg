@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="160" viewBox="0 0 800 160">
+  <defs>
+    <style>
+      @keyframes snakeMove {
+        0% { transform: translateX(-20px); }
+        50% { transform: translateX(20px); }
+        100% { transform: translateX(-20px); }
+      }
+      @keyframes fadeInOut {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+      .snake-body { animation: snakeMove 3s ease-in-out infinite; }
+      .pulse { animation: fadeInOut 2s ease-in-out infinite; }
+    </style>
+    <linearGradient id="snakeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bgGrid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#161b22;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="160" fill="url(#bgGrid)" rx="8" />
+
+  <!-- Contribution Grid (simplified, dark green squares) -->
+  <g opacity="0.6">
+    <!-- Row 1 -->
+    <rect x="10" y="10" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="24" y="10" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="38" y="10" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="52" y="10" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="66" y="10" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="80" y="10" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="94" y="10" width="10" height="10" rx="2" fill="#0e4429"/>
+    <!-- Row 2 -->
+    <rect x="10" y="24" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="24" y="24" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="38" y="24" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="52" y="24" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="66" y="24" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="80" y="24" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="94" y="24" width="10" height="10" rx="2" fill="#006d32"/>
+    <!-- Row 3 -->
+    <rect x="10" y="38" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="24" y="38" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="38" y="38" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="52" y="38" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="66" y="38" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="80" y="38" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="94" y="38" width="10" height="10" rx="2" fill="#26a641"/>
+    <!-- Row 4 -->
+    <rect x="10" y="52" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="24" y="52" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="38" y="52" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="52" y="52" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="66" y="52" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="80" y="52" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="94" y="52" width="10" height="10" rx="2" fill="#0e4429"/>
+    <!-- Row 5 -->
+    <rect x="10" y="66" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="24" y="66" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="38" y="66" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="52" y="66" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="66" y="66" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="80" y="66" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="94" y="66" width="10" height="10" rx="2" fill="#39d353"/>
+    <!-- Row 6 -->
+    <rect x="10" y="80" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="24" y="80" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="38" y="80" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="52" y="80" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="66" y="80" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="80" y="80" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="94" y="80" width="10" height="10" rx="2" fill="#0e4429"/>
+    <!-- Row 7 -->
+    <rect x="10" y="94" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="24" y="94" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="38" y="94" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="52" y="94" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="66" y="94" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="80" y="94" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="94" y="94" width="10" height="10" rx="2" fill="#26a641"/>
+  </g>
+
+  <!-- Snake Body (sinuous path across the grid) -->
+  <g class="snake-body" fill="none" stroke="url(#snakeGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <path d="M 8,15 L 18,15 L 28,15 L 38,29 L 48,43 L 58,57 L 68,71 L 78,85 L 88,99 L 98,99 L 98,85 L 88,71 L 78,57 L 68,43 L 58,29 L 48,15 L 38,15" />
+  </g>
+
+  <!-- Snake Head (diamond shape) -->
+  <g class="snake-body">
+    <polygon points="98,94 106,99 98,104 90,99" fill="url(#snakeGrad)" opacity="0.9" />
+    <!-- Eyes -->
+    <circle cx="96" cy="97" r="1.5" fill="white" />
+    <circle cx="100" cy="97" r="1.5" fill="white" />
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="145" text-anchor="middle" font-family="monospace" font-size="11" fill="#667eea" class="pulse">
+    🐍 GitHub Contribution Snake — Updated by Actions
+  </text>
+</svg>
